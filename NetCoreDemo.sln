@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreDemo", "EfCoreDemo\EfCoreDemo.csproj", "{5AC43530-B853-4CC3-BC7E-545E608B0822}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FF8DE413-AF7D-45DC-93CB-2AB19A7D54E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AC43530-B853-4CC3-BC7E-545E608B0822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC43530-B853-4CC3-BC7E-545E608B0822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC43530-B853-4CC3-BC7E-545E608B0822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC43530-B853-4CC3-BC7E-545E608B0822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8DE413-AF7D-45DC-93CB-2AB19A7D54E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8DE413-AF7D-45DC-93CB-2AB19A7D54E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8DE413-AF7D-45DC-93CB-2AB19A7D54E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8DE413-AF7D-45DC-93CB-2AB19A7D54E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4340A058-0179-481D-A8D3-A46CC87C991B}
+	EndGlobalSection
+EndGlobal

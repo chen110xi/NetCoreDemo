@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  efcoredemo:
+    image: efcoredemo
+    build:
+      context: ./EfCoreDemo
+      dockerfile: Dockerfile
