@@ -25,7 +25,7 @@ namespace EfCoreDemo.Mapping.OneToOne
             builder.Property(t => t.Email).HasColumnName("Email").IsRequired();
             builder.Property(t => t.RegisterDate).HasColumnName("RegisterDate").IsRequired();
 
-            // 表关联关系设置,实现一个User对一个Account,User为主体。
+            // 表关联关系设置,实现一个User对一个Account,User为主体，Account会有UserId的FK。
             builder
                 .HasOne(user => user.Account)
                 .WithOne(accout => accout.User);

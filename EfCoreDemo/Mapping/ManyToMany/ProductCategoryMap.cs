@@ -20,10 +20,10 @@ namespace EfCoreDemo.Mapping.ManyToMany
 
             // 关系
             builder.HasOne(p => p.Product)
-                .WithMany(p => p.ProductCategories);
+                .WithMany(p => p.ProductCategories).OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(p => p.Category)
-                .WithMany(p => p.ProductCategories);
+                .WithMany(p => p.ProductCategories).OnDelete(DeleteBehavior.Restrict);
 
 
         }

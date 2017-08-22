@@ -27,6 +27,8 @@ namespace EfCoreDemo.Controllers
         public IEnumerable<string> Get()
         {
             _demoContext.Accounts.ToList();
+            _demoContext.Accounts.ToList();
+            _demoContext.Accounts.ToList();
             return new string[] { "value1", "value2" };
         }
 
@@ -34,6 +36,9 @@ namespace EfCoreDemo.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+            _demoContext.Accounts.ToList();
+            _demoContext.Accounts.ToList();
+            _demoContext.Accounts.ToList();
             return "value";
         }
 

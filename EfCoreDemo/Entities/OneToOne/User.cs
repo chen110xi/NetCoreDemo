@@ -29,6 +29,5 @@ namespace EfCoreDemo.Entities.OneToOne
         /// 账号信息
         /// </summary>
         public Account Account { get; set; }
-        public Class Class { get; internal set; }
     }
 }

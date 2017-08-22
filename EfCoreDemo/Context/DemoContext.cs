@@ -20,12 +20,14 @@ namespace EfCoreDemo.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //Sql Server
             //var connection = @"Server = 192.168.18.58; User ID=sa; Password=aebell; Database = AllInOne; MultipleActiveResultSets=true;"; /*MultipleActiveResultSets=true;*/
             //var connection = @"Server = 192.168.1.30\sql2012; User ID=sa; Password=admin123!@#; Database = DemoDb; MultipleActiveResultSets=true;";
             var connection = @"Server=tcp:192.168.1.30\sql2012;Initial Catalog=DemoDb;User Id=sa;Password=admin123!@#";
 
             optionsBuilder.UseSqlServer(connection);
 
+            //PostgreSql
             //var connection = "User ID=postgres;Host=192.168.18.68;Password=123;Port=5432;Database=AllInOne9;Pooling=true;";
             //var connection = GlobalSetting.ConnectionString;
             //optionsBuilder.UseNpgsql(connection);
@@ -40,6 +42,7 @@ namespace EfCoreDemo.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -11,8 +11,8 @@ using System;
 namespace EfCoreDemo.Migrations
 {
     [DbContext(typeof(DemoContext))]
-    [Migration("20170822053606_Initialize")]
-    partial class Initialize
+    [Migration("20170822085725_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,7 +31,7 @@ namespace EfCoreDemo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("EfCoreDemo.Entities.ManyToMany.Product", b =>
@@ -44,7 +44,7 @@ namespace EfCoreDemo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("EfCoreDemo.Entities.ManyToMany.ProductCategory", b =>
@@ -62,7 +62,7 @@ namespace EfCoreDemo.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductCategory");
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("EfCoreDemo.Entities.OneToMany.Class", b =>
@@ -95,7 +95,7 @@ namespace EfCoreDemo.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.ToTable("Student");
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("EfCoreDemo.Entities.OneToOne.Account", b =>
@@ -131,8 +131,6 @@ namespace EfCoreDemo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("AccountID");
 
-                    b.Property<int?>("ClassId");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnName("Email")
@@ -147,8 +145,6 @@ namespace EfCoreDemo.Migrations
                         .HasMaxLength(50);
 
                     b.HasKey("UserId");
-
-                    b.HasIndex("ClassId");
 
                     b.ToTable("User");
                 });
@@ -176,13 +172,6 @@ namespace EfCoreDemo.Migrations
                     b.HasOne("EfCoreDemo.Entities.OneToOne.User", "User")
                         .WithOne("Account")
                         .HasForeignKey("EfCoreDemo.Entities.OneToOne.Account", "UserId");
-                });
-
-            modelBuilder.Entity("EfCoreDemo.Entities.OneToOne.User", b =>
-                {
-                    b.HasOne("EfCoreDemo.Entities.OneToMany.Class", "Class")
-                        .WithMany()
-                        .HasForeignKey("ClassId");
                 });
 #pragma warning restore 612, 618
         }
