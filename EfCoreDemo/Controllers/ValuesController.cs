@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EfCoreDemo.Context;
+using EfCoreDemo.Entities.OneToOne;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -24,12 +25,14 @@ namespace EfCoreDemo.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Account> Get()
         {
+
             _demoContext.Accounts.ToList();
             _demoContext.Accounts.ToList();
             _demoContext.Accounts.ToList();
-            return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
+            return _demoContext.Accounts.ToList();
         }
 
         // GET api/values/5

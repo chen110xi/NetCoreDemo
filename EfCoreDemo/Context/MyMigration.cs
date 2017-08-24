@@ -51,7 +51,7 @@ namespace EfCoreDemo.Context
                 var user1 = context.Users.Add(new User()
                 {
                     UserName = "晨曦1",
-                    //Email = "chen110xi@qq.com",
+                    Email = "chen110xi@qq.com",
                     RegisterDate = DateTime.Now
                 });
                 var user2 = context.Users.Add(new User()

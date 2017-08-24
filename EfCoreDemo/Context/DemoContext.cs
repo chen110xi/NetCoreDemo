@@ -23,7 +23,7 @@ namespace EfCoreDemo.Context
             //Sql Server
             //var connection = @"Server = 192.168.18.58; User ID=sa; Password=aebell; Database = AllInOne; MultipleActiveResultSets=true;"; /*MultipleActiveResultSets=true;*/
             //var connection = @"Server = 192.168.1.30\sql2012; User ID=sa; Password=admin123!@#; Database = DemoDb; MultipleActiveResultSets=true;";
-            var connection = @"Server=tcp:192.168.1.30\sql2012;Initial Catalog=DemoDb;User Id=sa;Password=admin123!@#";
+            var connection = @"Server=tcp:127.0.0.1;Initial Catalog=DemoDb;User Id=sa;Password=admin123!@#";
 
             optionsBuilder.UseSqlServer(connection);
 
